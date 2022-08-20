@@ -4,18 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{34424A7A-BCE9-41AE-B919-29831E5928C9}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>MainConsole</RootNamespace>
-    <AssemblyName>MainConsole</AssemblyName>
+    <ProjectGuid>{CFC788F7-D780-45E5-81BE-0E84543FE55D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Problem28</RootNamespace>
+    <AssemblyName>Problem28</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -44,36 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ImplementStrStr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PalindromeNumber\PalindromeNumber.csproj">
-      <Project>{7f7816db-3954-4647-90ce-bfbdcc5606ca}</Project>
-      <Name>PalindromeNumber</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Problem35\SearchInsertFinder.csproj">
-      <Project>{3225b04f-06d4-4e29-822e-d00bb1ba605c}</Project>
-      <Name>SearchInsertFinder</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Problem66\Problem66.csproj">
-      <Project>{c01a87b2-1ad8-41dd-9134-ba5a1a587c32}</Project>
-      <Name>Problem66</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TwoSums2\TwoSums2.csproj">
-      <Project>{f22272bf-c847-4e28-8bf3-7eeadb2b3ccc}</Project>
-      <Name>TwoSums2</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ValidParentheses\ValidParentheses.csproj">
-      <Project>{f1e310fc-5dc8-4d07-aa6c-d00ab1eb326e}</Project>
-      <Name>ValidParentheses</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

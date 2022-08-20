@@ -11,42 +11,67 @@ namespace ValidParentheses
     {
         public bool IsValid(string s)
         {
-            int paraCtr1 = 0;
-            int paraCtr2 = 0;
-            int paraCtr3 = 0;
-            foreach (char c in s)
+            System.Collections.Stack stack = new System.Collections.Stack();
+
+            foreach(char c in s)
             {
-                if(c.Equals('('))
-                {
-                    paraCtr1++;
+                if(c == '(')
+                { 
+                    stack.Push(c); 
                 }
-                if (c.Equals('['))
+                else if(c == '[')
                 {
-                    paraCtr2++;
+                    stack.Push(c);
                 }
-                if (c.Equals('{'))
+                else if(c == '{')
                 {
-                    paraCtr3++;
+                    stack.Push(c);
                 }
-                if (c.Equals(')'))
+
+                if(stack.Count == 0)
                 {
-                    paraCtr1--;
+                    return false;
                 }
-                if (c.Equals(']'))
+                else if(c == ')')
                 {
-                    paraCtr2--;
+                    if(stack.Peek().ToString() == "(")
+                    {
+                        stack.Pop();
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
-                if (c.Equals('}'))
+                else if(c == ']')
                 {
-                    paraCtr3--;
+                    if(stack.Peek().ToString() == "[")
+                    {
+                        stack.Pop();
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else if (c == '}')
+                {
+                    if (stack.Peek().ToString() == "{")
+                    {
+                        stack.Pop();
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
             }
 
-            if(paraCtr1 == 0 && paraCtr2 == 0 && paraCtr3 == 0)
+            if (stack.Count != 0)
             {
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
     }
 }
