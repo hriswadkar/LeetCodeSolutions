@@ -1,5 +1,7 @@
 <Solution>
   <Project Path="../13 RomanToInteger/13 RomanToInteger.csproj" />
   <Project Path="../PalindromeNumber/PalindromeNumber.csproj" />
+  <Project Path="../Problem28/Problem28.csproj" Id="fd6439f7-d28b-4fe6-b251-a55b39869235" />
+  <Project Path="../Problem35/Problem35.csproj" Id="2b407535-6481-4c6d-b4e8-493966be4314" />
   <Project Path="LeetCodeCSharpSolutions.csproj" Id="711e7d4f-2ac3-4c4a-b51f-07aeee736c5b" />
 </Solution>
